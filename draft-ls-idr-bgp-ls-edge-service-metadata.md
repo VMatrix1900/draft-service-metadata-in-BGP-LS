@@ -9,19 +9,19 @@ number:
 date:
 consensus: true
 v: 3
-area: AREA
-workgroup: WG Working Group
+area: "Routing"
+workgroup: "Inter-Domain Routing"
 keyword:
  - next generation
  - unicorn
  - sparkling distributed ledger
 venue:
-  group: WG
-  type: Working Group
-  mail: WG@example.com
-  arch: https://example.com/WG
-  github: USER/REPO
-  latest: https://example.com/LATEST
+  group: "Inter-Domain Routing"
+  type: "Working Group"
+  mail: "idr@ietf.org"
+  arch: "https://mailarchive.ietf.org/arch/browse/idr/"
+  github: "VMatrix1900/draft-service-metadata-in-BGP-LS"
+  latest: "https://VMatrix1900.github.io/draft-service-metadata-in-BGP-LS/draft-ls-idr-bgp-ls-edge-service-metadata.html"
 
 author:
  -
