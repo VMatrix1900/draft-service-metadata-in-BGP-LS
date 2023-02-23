@@ -14,7 +14,7 @@ Expires: 27 August 2023                                            T. He
 
 
                Distribution of Service Metadata in BGP-LS
-            draft-ls-idr-bgp-ls-edge-service-metadata-latest
+              draft-ls-idr-bgp-ls-service-metadata-latest
 
 Abstract
 
@@ -40,7 +40,7 @@ About This Document
    https://VMatrix1900.github.io/draft-service-metadata-in-BGP-LS/draft-
    ls-idr-bgp-ls-edge-service-metadata.html.  Status information for
    this document may be found at https://datatracker.ietf.org/doc/draft-
-   ls-idr-bgp-ls-edge-service-metadata/.
+   ls-idr-bgp-ls-service-metadata/.
 
    Discussion of this document takes place on the Inter-Domain Routing
    Working Group mailing list (mailto:idr@ietf.org), which is archived
