@@ -38,9 +38,9 @@ About This Document
 
    The latest revision of this draft can be found at
    https://VMatrix1900.github.io/draft-service-metadata-in-BGP-LS/draft-
-   ls-idr-bgp-ls-edge-service-metadata.html.  Status information for
-   this document may be found at https://datatracker.ietf.org/doc/draft-
-   ls-idr-bgp-ls-service-metadata/.
+   ls-idr-bgp-ls-service-metadata.html.  Status information for this
+   document may be found at https://datatracker.ietf.org/doc/draft-ls-
+   idr-bgp-ls-service-metadata/.
 
    Discussion of this document takes place on the Inter-Domain Routing
    Working Group mailing list (mailto:idr@ietf.org), which is archived
