@@ -3,7 +3,7 @@ title: "Distribution of Service Metadata in BGP-LS"
 abbrev: "Service Metadata in BGP-LS"
 category: std
 
-docname: draft-ls-idr-bgp-ls-edge-service-metadata-latest
+docname: draft-ls-idr-bgp-ls-service-metadata-latest
 submissiontype: IETF  # also: "independent", "IAB", or "IRTF"
 number:
 date:
@@ -254,4 +254,3 @@ email: dingxiangfeng@huawei.com
 {:numbered="false"}
 
 The authors would like to thank Haibo Wang, LiLi Wang, Jianwei Mao for their help.
-
