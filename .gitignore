@@ -17,7 +17,7 @@
 /versioned/
 Gemfile.lock
 archive.json
-draft-ls-idr-bgp-ls-edge-service-metadata.xml
+draft-ls-idr-bgp-ls-service-metadata.xml
 package-lock.json
 report.xml
 !requirements.txt
