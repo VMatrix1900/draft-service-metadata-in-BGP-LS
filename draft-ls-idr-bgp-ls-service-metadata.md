@@ -19,7 +19,7 @@ venue:
   mail: "idr@ietf.org"
   arch: "https://mailarchive.ietf.org/arch/browse/idr/"
   github: "VMatrix1900/draft-service-metadata-in-BGP-LS"
-  latest: "https://VMatrix1900.github.io/draft-service-metadata-in-BGP-LS/draft-ls-idr-bgp-ls-edge-service-metadata.html"
+  latest: "https://VMatrix1900.github.io/draft-service-metadata-in-BGP-LS/draft-ls-idr-bgp-ls-service-metadata.html"
 
 author:
  -
