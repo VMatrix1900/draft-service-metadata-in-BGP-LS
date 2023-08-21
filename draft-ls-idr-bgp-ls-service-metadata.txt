@@ -5,12 +5,12 @@
 Inter-Domain Routing                                          C. Li, Ed.
 Internet-Draft                                               H. Shi, Ed.
 Intended status: Standards Track                     Huawei Technologies
-Expires: 27 August 2023                                            T. He
+Expires: 22 February 2024                                          T. He
                                                                  R. Pang
                                                             China Unicom
                                                                  G. Qian
                                                      Huawei Technologies
-                                                        23 February 2023
+                                                          21 August 2023
 
 
                Distribution of Service Metadata in BGP-LS
@@ -21,7 +21,7 @@ Abstract
    In edge computing, a service may be deployed on multiple instances
    within one or more sites, called edge service.  The edge service is
    associated with an ANYCAST address in IP layer, and the route of it
-   with potential service metatdata will be distributed to the network.
+   with potential service metadata will be distributed to the network.
    The Edge Service Metadata can be used by ingress routers to make path
    selections not only based on the routing cost but also the running
    environment of the edge services.
@@ -65,7 +65,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 27 August 2023.
+   This Internet-Draft will expire on 22 February 2024.
 
 Copyright Notice
 
@@ -96,7 +96,7 @@ Table of Contents
    4.  IANA Considerations
    5.  Contributors
    6.  Normative References
-   Acknowledgements
+   Appendix A.  Acknowledgements
    Authors' Addresses
 
 1.  Introduction
@@ -107,13 +107,13 @@ Table of Contents
    services such as VR/AR and intelligent transportation, the QoE will
    depend on both the network metrics and the compute metrics.  For
    example, if the nearest site is overloaded due to the demand
-   fluctuation, then steer the user traffic to a another light-loaded
+   fluctuation, then steer the user traffic to an another light-loaded
    sites may improve the QoE.
 
-   [I-D.ietf-idr-5g-edge-service-metadata] descirbes the BGP extension
+   [I-D.ietf-idr-5g-edge-service-metadata] describes the BGP extension
    of distributing service route with network and computing-related
-   metrics.  The router connected to the site will received the service
-   routes and service metadata sent from devices inside the egdge site,
+   metrics.  The router connected to the site will receive the service
+   routes and service metadata sent from devices inside the edge site,
    and then generates the corresponding routes and distributes them to
    ingress routers.  However, the route with service metadata on the
    router connected to the site can be also collected by a central
@@ -136,12 +136,11 @@ Table of Contents
 
 2.  BGP-LS Extension for Service in a Site
 
-   The goal of the BGP-LS extension is to collect the information of the
+   The goal of the BGP-LS extension is to collect information of the
    service prefix and metadata of the service, such as network metrics
-   and compute metrics.  A service is identified by an prefix, and this
-   information is carried by existing prefix NLRI TLV.  Other
-   information including service metadata are carried by attributes
-   TLVs.
+   and compute metrics.  A service is identified by a prefix, and this
+   information is carried by the existing prefix NLRI TLV.  Other
+   information including service metadata is carried by attributes TLVs.
 
 2.1.  Prefix NLRI
 
@@ -185,11 +184,13 @@ Table of Contents
    The following three prefix attribute TLVs are used to carry the
    metadata of a service instance:
 
-   1.  Metadata Path Attribute TLV carries the compute metric of the
-       service instance such as site preference, capacity index and load
-       measurement defined in [I-D.ietf-idr-5g-edge-service-metadata].
+   1.  Metadata Path Attribute TLV carries the computing metric of the
+       service instances such as site preference, capacity index, and
+       load measurement defined in
+       [I-D.ietf-idr-5g-edge-service-metadata].
 
-   2.  Prefix SID TLV carries a Prefix SID associated to the edge site.
+   2.  Prefix SID TLV carries a Prefix SID associated with the edge
+       site.
 
    3.  Color Attribute TLV carries the service requirement level
        information of the service
@@ -200,7 +201,7 @@ Table of Contents
    Edge Service Metadata defined in the
    [I-D.ietf-idr-5g-edge-service-metadata].  It contains multiple sub-
    TLVs, with each sub-TLV containing a specific metric of the Edge
-   Service Metadata.  This document define a new TLV in BGP-LS, which
+   Service Metadata.  This document defines a new TLV in BGP-LS, which
    reuse the name and the format of Metadata Path Attribute TLV.
 
         0                   1                   2                   3
@@ -218,7 +219,7 @@ Table of Contents
    *  Type: identify the Metadata Path Attribute, to be assigned by
       IANA.
 
-   *  Length: the total number of the octets of the value field.
+   *  Length: the total number of octets of the value field.
 
    *  Value: contains multiple sub-TLVs.
 
@@ -229,29 +230,29 @@ Table of Contents
        site.
 
    2.  Capacity Index indicates the capability of a site.  One Edge Site
-       can be in full capacity, reduced capacity, or completely out of
+       can be at full capacity, reduced capacity, or completely out of
        service.
 
    3.  Load Measurement indicates the load level of the site.
 
-   To collect these information, this document defines TLVs reusing the
+   To collect this information, this document defines TLVs reusing the
    name and format of the TLVs defined in
    [I-D.ietf-idr-5g-edge-service-metadata].
 
 2.3.  Prefix SID Attribute TLV
 
-   In some cases, there may be multiple sites connect to one
-   Edge(egress) router through different interfaces.  Generally, a
-   overlay path, such a overlay tunnel will be used between the ingress
-   router and the egress for steering the traffic to the best site
-   correctly.  In SR-MPLS networks or SRv6 networks, a prefix SID is
-   needed.  For example, some SRv6 Endpoint Behaviors such as End.DX6,
-   End.X can be encoded for each site so that the egress router can
-   steer the traffic to the corresponding site.  The Prefix SID TLV
-   defined [RFC9085] can be used to collect this information.
+   In some cases, there may be multiple sites connected to one
+   Edge(egress) router through different interfaces.  Generally, an
+   overlay tunnel will be used between the ingress router and the egress
+   for steering the traffic to the best site correctly.  In SR-MPLS
+   networks or SRv6 networks, a prefix SID is needed.  For example, some
+   SRv6 Endpoint Behaviors such as End.DX6, End.X can be encoded for
+   each site so that the egress router can steer the traffic to the
+   corresponding site.  The Prefix SID TLV defined [RFC9085] can be used
+   to collect this information.
 
    The Prefix SID TLV is an optional TLV to carry the Prefix SID
-   associated to the edge site.  The TLV format is illustrated in
+   associated with the edge site.  The TLV format is illustrated in
    Figure 4.
 
         0                   1                   2                   3
@@ -268,15 +269,15 @@ Table of Contents
 
    *  Type: 1158, identify the Prefix SID Attribute.
 
-   *  Length: the total number of the octets of the value field.
+   *  Length: the total number of octets of the value field.
 
    *  Value: contains Prefix SID sub-TLV.
 
 2.3.1.  Color Attribute TLV
 
    Color is used to indicate the service level.  For example, different
-   site may have different level of service capability which is taken
-   into account of by the controller when calculate the path to the
+   sites may have different levels of service capability which is taken
+   into account by the controller when calculating the path to the
    egress router.  More details can be added in the future revision.
 
    The TLV format(shown in Figure 5) is similar to the BGP Color
@@ -298,8 +299,8 @@ Table of Contents
 
    *  Length: 6, length of Flags + Color Value.
 
-   *  Flags and Color is the same as defined in [RFC9012].  Color Value:
-      32 bit value of color.
+   *  Flags and Color are the same as defined in [RFC9012].  Color
+      Value: 32 bit value of color.
 
 3.  Security Considerations
 
@@ -340,12 +341,12 @@ Table of Contents
 6.  Normative References
 
    [I-D.ietf-idr-5g-edge-service-metadata]
-              Dunbar, L., Majumdar, K., Wang, H., and G. S. Mishra, "BGP
-              Extension for 5G Edge Service Metadata", Work in Progress,
-              Internet-Draft, draft-ietf-idr-5g-edge-service-metadata-
-              00, 2 December 2022,
+              Dunbar, L., Majumdar, K., Wang, H., Mishra, G. S., and Z.
+              Du, "BGP Extension for 5G Edge Service Metadata", Work in
+              Progress, Internet-Draft, draft-ietf-idr-5g-edge-service-
+              metadata-07, 9 August 2023,
               <https://datatracker.ietf.org/doc/html/draft-ietf-idr-5g-
-              edge-service-metadata-00>.
+              edge-service-metadata-07>.
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
@@ -379,7 +380,7 @@ Table of Contents
               DOI 10.17487/RFC9252, July 2022,
               <https://www.rfc-editor.org/rfc/rfc9252>.
 
-Acknowledgements
+Appendix A.  Acknowledgements
 
    The authors would like to thank Haibo Wang, LiLi Wang, Jianwei Mao
    for their help.
