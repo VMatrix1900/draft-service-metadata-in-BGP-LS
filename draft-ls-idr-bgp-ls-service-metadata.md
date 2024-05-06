@@ -243,4 +243,4 @@ email: dingxiangfeng@huawei.com
 
 # Acknowledgements
 
-The authors would like to thank Haibo Wang, LiLi Wang, Jianwei Mao for their help.
+The authors would like to thank Haibo Wang, Lili Wang, Jianwei Mao for their help.
