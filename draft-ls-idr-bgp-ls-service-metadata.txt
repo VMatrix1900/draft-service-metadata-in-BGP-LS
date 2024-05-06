@@ -5,12 +5,12 @@
 Inter-Domain Routing                                          C. Li, Ed.
 Internet-Draft                                               H. Shi, Ed.
 Intended status: Standards Track                     Huawei Technologies
-Expires: 22 February 2024                                          T. He
+Expires: 7 November 2024                                           T. He
                                                                  R. Pang
                                                             China Unicom
                                                                  G. Qian
                                                      Huawei Technologies
-                                                          21 August 2023
+                                                              6 May 2024
 
 
                Distribution of Service Metadata in BGP-LS
@@ -65,11 +65,11 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 22 February 2024.
+   This Internet-Draft will expire on 7 November 2024.
 
 Copyright Notice
 
-   Copyright (c) 2023 IETF Trust and the persons identified as the
+   Copyright (c) 2024 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -341,12 +341,12 @@ Table of Contents
 6.  Normative References
 
    [I-D.ietf-idr-5g-edge-service-metadata]
-              Dunbar, L., Majumdar, K., Wang, H., Mishra, G. S., and Z.
+              Dunbar, L., Majumdar, K., Li, C., Mishra, G. S., and Z.
               Du, "BGP Extension for 5G Edge Service Metadata", Work in
               Progress, Internet-Draft, draft-ietf-idr-5g-edge-service-
-              metadata-07, 9 August 2023,
+              metadata-18, 25 April 2024,
               <https://datatracker.ietf.org/doc/html/draft-ietf-idr-5g-
-              edge-service-metadata-07>.
+              edge-service-metadata-18>.
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
@@ -382,7 +382,7 @@ Table of Contents
 
 Appendix A.  Acknowledgements
 
-   The authors would like to thank Haibo Wang, LiLi Wang, Jianwei Mao
+   The authors would like to thank Haibo Wang, Lili Wang, Jianwei Mao
    for their help.
 
 Authors' Addresses
