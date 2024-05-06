@@ -73,17 +73,17 @@ informative:
 
 --- abstract
 
-In edge computing, a service may be deployed on multiple instances within one or more sites, called edge service. The edge service is associated with an ANYCAST address in IP layer, and the route of it with potential service metadata will be distributed to the network. The Edge Service Metadata can be used by ingress routers to make path selections not only based on the routing cost but also the running environment of the edge services.
+In edge computing, a service may be deployed on multiple instances within one or more sites, called edge service. The edge service is associated with an ANYCAST address in the IP layer, and the route of it with potential service metadata will be distributed to the network. The Edge Service Metadata can be used by ingress routers to make path selections not only based on the routing cost but also the running environment of the edge services.
 
-The service route with metadata can be collected by a PCE(Path Compute Element) or an analyzer for calculating the best path to the best site/instance.  This draft describes a mechanism to collect the information of the service routes and related service metadata in BGP-LS.
+The service route with metadata can be collected by a PCE(Path Compute Element) or an analyzer for calculating the best path to the best site/instance. This draft describes a mechanism to collect information of the service routes and related service metadata in BGP-LS.
 
 --- middle
 
 # Introduction {#intro}
 
-Many services deploy their service instances in multiple sites to get better response time and resource utilization. These sites are often geographically distributed to serve the user demand. For some services such as VR/AR and intelligent transportation, the QoE will depend on both the network metrics and the compute metrics. For example, if the nearest site is overloaded due to the demand fluctuation, then steer the user traffic to an another light-loaded sites may improve the QoE.
+Many services deploy their service instances in multiple sites to get better response time and resource utilization. These sites are often geographically distributed to serve the user demand. For some services such as VR/AR and intelligent transportation, the QoE will depend on both the network metrics and the compute metrics. For example, if the nearest site is overloaded due to the demand fluctuation, then steering the user traffic to another light-loaded site may improve the QoE.
 
-{{I-D.ietf-idr-5g-edge-service-metadata}} describes the BGP extension of distributing service route with network and computing-related metrics. The router connected to the site will receive the service routes and service metadata sent from devices inside the edge site, and then generates the corresponding routes and distributes them to ingress routers. However, the route with service metadata on the router connected to the site can be also collected by a central Controller for calculating the best path to the best site.
+{{I-D.ietf-idr-5g-edge-service-metadata}} describes the BGP extension of distributing service route with network and computing-related metrics. The router connected to the site will receive the service routes and service metadata sent from devices inside the edge site, and then generate the corresponding routes and distribute them to ingress routers. However, the route with service metadata on the router connected to the site can be also collected by a central Controller for calculating the best path to the best site.
 
 This document defines an extension of BGP-LS to carry the service metadata along with the service route. Using the service metadata and the service route, the controller can calculate the best site for the traffic, giving each user the best QoE.
 
@@ -143,7 +143,7 @@ The following three prefix attribute TLVs are used to carry the metadata of a se
 
 ### Metadata Path Attribute TLV {#metadata}
 
-The Metadata Path Attribute TLV is an optional attribute to carry the Edge Service Metadata defined in the {{I-D.ietf-idr-5g-edge-service-metadata}}. It contains multiple sub-TLVs, with each sub-TLV containing a specific metric of the Edge Service Metadata. This document defines a new TLV in BGP-LS, which reuse the name and the format of Metadata Path Attribute TLV.
+The Metadata Path Attribute TLV is an optional attribute to carry the Edge Service Metadata defined in the {{I-D.ietf-idr-5g-edge-service-metadata}}. It contains multiple sub-TLVs, with each sub-TLV containing a specific metric of the Edge Service Metadata. This document defines a new TLV in BGP-LS, which reuses the name and the format of Metadata Path Attribute TLV.
 
 ~~~
       0                   1                   2                   3
