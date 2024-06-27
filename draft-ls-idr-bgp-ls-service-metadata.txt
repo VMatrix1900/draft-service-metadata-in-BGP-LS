@@ -5,12 +5,12 @@
 Inter-Domain Routing                                          C. Li, Ed.
 Internet-Draft                                               H. Shi, Ed.
 Intended status: Standards Track                     Huawei Technologies
-Expires: 7 November 2024                                           T. He
+Expires: 29 December 2024                                          T. He
                                                                  R. Pang
                                                             China Unicom
                                                                  G. Qian
                                                      Huawei Technologies
-                                                              6 May 2024
+                                                            27 June 2024
 
 
                Distribution of Service Metadata in BGP-LS
@@ -65,7 +65,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 7 November 2024.
+   This Internet-Draft will expire on 29 December 2024.
 
 Copyright Notice
 
@@ -185,9 +185,10 @@ Table of Contents
    metadata of a service instance:
 
    1.  Metadata Path Attribute TLV carries the computing metric of the
-       service instances such as site preference, capacity index, and
-       load measurement defined in
-       [I-D.ietf-idr-5g-edge-service-metadata].
+       service instances such as site preference, site physical
+       availability index, service delay prediction, service-oriented
+       capability and service-oriented utilization defined in Section 4
+       of [I-D.ietf-idr-5g-edge-service-metadata].
 
    2.  Prefix SID TLV carries a Prefix SID associated with the edge
        site.
@@ -221,23 +222,8 @@ Table of Contents
 
    *  Length: the total number of octets of the value field.
 
-   *  Value: contains multiple sub-TLVs.
-
-   There are three types of Edge Service Metadata sub-TLVs defined in
-   [I-D.ietf-idr-5g-edge-service-metadata]:
-
-   1.  Site Preference Index indicates the preference to choose the
-       site.
-
-   2.  Capacity Index indicates the capability of a site.  One Edge Site
-       can be at full capacity, reduced capacity, or completely out of
-       service.
-
-   3.  Load Measurement indicates the load level of the site.
-
-   To collect this information, this document defines TLVs reusing the
-   name and format of the TLVs defined in
-   [I-D.ietf-idr-5g-edge-service-metadata].
+   *  Value: contains multiple sub-TLVs.  The name and format of sub-TLV
+      is the same as [I-D.ietf-idr-5g-edge-service-metadata]
 
 2.3.  Prefix SID Attribute TLV
 
@@ -312,25 +298,29 @@ Table of Contents
    the registry called "BGP-LS Node Descriptor, Link Descriptor, Prefix
    Descriptor, and Attribute TLVs":
 
-         +=======+==============================+===============+
-         | Value | Description                  | Reference     |
-         +=======+==============================+===============+
-         | TBD1  | Metadata Path Attribute Type | Section 2.2.1 |
-         +-------+------------------------------+---------------+
-         | TBD2  | Site Preference Sub-Type     | Section 2.2.1 |
-         +-------+------------------------------+---------------+
-         | TBD3  | Capacity Sub-Type            | Section 2.2.1 |
-         +-------+------------------------------+---------------+
-         | TBD4  | Load Measurement Sub-Type1:  | Section 2.2.1 |
-         |       | Aggregated-Cost              |               |
-         +-------+------------------------------+---------------+
-         | TBD5  | Load Measurement Sub-Type2:  | Section 2.2.1 |
-         |       | Raw-Measurements             |               |
-         +-------+------------------------------+---------------+
-         | TBD6  | Color Attribute Type         | Section 2.3.1 |
-         +-------+------------------------------+---------------+
+   +=======+===========================================+===============+
+   | Value | Description                               | Reference     |
+   +=======+===========================================+===============+
+   | TBD1  | Metadata Path Attribute Type              | Section 2.2.1 |
+   +-------+-------------------------------------------+---------------+
+   | TBD2  | Color Attribute Type                      | Section 2.3.1 |
+   +-------+-------------------------------------------+---------------+
+   | TBD3  | Site Preference Sub-Type                  | Section 2.2.1 |
+   +-------+-------------------------------------------+---------------+
+   | TBD4  | Site Physical Availability                | Section 2.2.1 |
+   |       | Index Sub-Type                            |               |
+   +-------+-------------------------------------------+---------------+
+   | TBD5  | Service Delay Prediction                  | Section 2.2.1 |
+   |       | Index Sub-Type                            |               |
+   +-------+-------------------------------------------+---------------+
+   | TBD6  | Service-Oriented Capability               | Section 2.2.1 |
+   |       | Sub-Type                                  |               |
+   +-------+-------------------------------------------+---------------+
+   | TBD7  | Service-Oriented Utilization              | Section 2.2.1 |
+   |       | Sub-Type                                  |               |
+   +-------+-------------------------------------------+---------------+
 
-                                 Table 1
+                                  Table 1
 
 5.  Contributors
 
@@ -344,9 +334,9 @@ Table of Contents
               Dunbar, L., Majumdar, K., Li, C., Mishra, G. S., and Z.
               Du, "BGP Extension for 5G Edge Service Metadata", Work in
               Progress, Internet-Draft, draft-ietf-idr-5g-edge-service-
-              metadata-18, 25 April 2024,
+              metadata-19, 24 June 2024,
               <https://datatracker.ietf.org/doc/html/draft-ietf-idr-5g-
-              edge-service-metadata-18>.
+              edge-service-metadata-19>.
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
