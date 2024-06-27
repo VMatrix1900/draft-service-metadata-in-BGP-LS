@@ -137,7 +137,7 @@ Specifically, the service prefix is carried by the IP Reachability Information T
 
 The following three prefix attribute TLVs are used to carry the metadata of a service instance:
 
-1. Metadata Path Attribute TLV carries the computing metric of the service instances such as site preference, capacity index, and load measurement defined in {{I-D.ietf-idr-5g-edge-service-metadata}}.
+1. Metadata Path Attribute TLV carries the computing metric of the service instances such as site preference, site physical availability index, service delay prediction, service-oriented capability and service-oriented utilization defined in {{Section 4 of I-D.ietf-idr-5g-edge-service-metadata}}.
 2. Prefix SID TLV carries a Prefix SID associated with the edge site.
 3. Color Attribute TLV carries the service requirement level information of the service
 
@@ -160,15 +160,7 @@ The Metadata Path Attribute TLV is an optional attribute to carry the Edge Servi
 
 - Type: identify the Metadata Path Attribute, to be assigned by IANA.
 - Length: the total number of octets of the value field.
-- Value: contains multiple sub-TLVs.
-
-There are three types of Edge Service Metadata sub-TLVs defined in {{I-D.ietf-idr-5g-edge-service-metadata}}:
-
-1. Site Preference Index indicates the preference to choose the site.
-2. Capacity Index indicates the capability of a site. One Edge Site can be at full capacity, reduced capacity, or completely out of service.
-3. Load Measurement indicates the load level of the site.
-
-To collect this information, this document defines TLVs reusing the name and format of the TLVs defined in {{I-D.ietf-idr-5g-edge-service-metadata}}.
+- Value: contains multiple sub-TLVs. The name and format of sub-TLV is the same as {{I-D.ietf-idr-5g-edge-service-metadata}}
 
 ## Prefix SID Attribute TLV {#prefix-SID}
 
@@ -227,11 +219,12 @@ This document requires IANA to assign the following code points from the registr
 | Value | Description | Reference |
 |-------|------|-----------|
 | TBD1  | Metadata Path Attribute Type | {{metadata}} |
-| TBD2  | Site Preference Sub-Type | {{metadata}} |
-| TBD3  | Capacity Sub-Type | {{metadata}} |
-| TBD4  | Load Measurement Sub-Type1: Aggregated-Cost | {{metadata}} |
-| TBD5  | Load Measurement Sub-Type2: Raw-Measurements | {{metadata}} |
-| TBD6  | Color Attribute Type | {{color}} |
+| TBD2  | Color Attribute Type | {{color}} |
+| TBD3  | Site Preference Sub-Type | {{metadata}} |
+| TBD4  | Site Physical Availability Index Sub-Type | {{metadata}} |
+| TBD5  | Service Delay Prediction Index Sub-Type | {{metadata}} |
+| TBD6  | Service-Oriented Capability Sub-Type | {{metadata}} |
+| TBD7  | Service-Oriented Utilization Sub-Type | {{metadata}}
 
 # Contributors
 
