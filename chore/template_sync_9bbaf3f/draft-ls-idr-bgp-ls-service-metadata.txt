@@ -5,12 +5,12 @@
 Inter-Domain Routing                                          C. Li, Ed.
 Internet-Draft                                               H. Shi, Ed.
 Intended status: Standards Track                     Huawei Technologies
-Expires: 16 August 2025                                            T. He
+Expires: 9 October 2025                                            T. He
                                                                  R. Pang
                                                             China Unicom
                                                                  G. Qian
                                                      Huawei Technologies
-                                                        12 February 2025
+                                                            7 April 2025
 
 
                Distribution of Service Metadata in BGP-LS
@@ -65,7 +65,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 16 August 2025.
+   This Internet-Draft will expire on 9 October 2025.
 
 Copyright Notice
 
