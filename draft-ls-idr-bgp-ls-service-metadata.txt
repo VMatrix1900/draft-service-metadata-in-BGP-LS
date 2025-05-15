@@ -5,12 +5,12 @@
 Inter-Domain Routing                                          C. Li, Ed.
 Internet-Draft                                               H. Shi, Ed.
 Intended status: Standards Track                     Huawei Technologies
-Expires: 16 August 2025                                            T. He
+Expires: 16 November 2025                                          T. He
                                                                  R. Pang
                                                             China Unicom
                                                                  G. Qian
                                                      Huawei Technologies
-                                                        12 February 2025
+                                                             15 May 2025
 
 
                Distribution of Service Metadata in BGP-LS
@@ -65,7 +65,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 16 August 2025.
+   This Internet-Draft will expire on 16 November 2025.
 
 Copyright Notice
 
@@ -334,9 +334,9 @@ Table of Contents
               Dunbar, L., Majumdar, K., Li, C., Mishra, G. S., and Z.
               Du, "BGP Extension for 5G Edge Service Metadata", Work in
               Progress, Internet-Draft, draft-ietf-idr-5g-edge-service-
-              metadata-26, 15 January 2025,
+              metadata-29, 28 April 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-idr-5g-
-              edge-service-metadata-26>.
+              edge-service-metadata-29>.
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
