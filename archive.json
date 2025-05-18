@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-05-15T00:38:56.506295+00:00",
+  "timestamp": "2025-05-18T00:43:22.600477+00:00",
   "repo": "VMatrix1900/draft-service-metadata-in-BGP-LS",
   "labels": [
     {
@@ -91,7 +91,7 @@
       "id": "PR_kwDOJBV1fc6RjpDN",
       "title": "upstream merge template repository",
       "url": "https://github.com/VMatrix1900/draft-service-metadata-in-BGP-LS/pull/2",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "VMatrix1900",
       "authorAssociation": "OWNER",
       "assignees": [],
@@ -100,17 +100,19 @@
       ],
       "body": "Merge https://github.com/martinthomson/internet-draft-template 9bbaf3f",
       "createdAt": "2025-04-07T01:55:55Z",
-      "updatedAt": "2025-04-07T01:55:55Z",
+      "updatedAt": "2025-05-15T08:53:11Z",
       "baseRepository": "VMatrix1900/draft-service-metadata-in-BGP-LS",
       "baseRefName": "main",
       "baseRefOid": "acad707a035610fae97cd0495f1f617d975c509f",
       "headRepository": "VMatrix1900/draft-service-metadata-in-BGP-LS",
       "headRefName": "chore/template_sync_9bbaf3f",
       "headRefOid": "05a30387d4cd74202661cca39122dd297c1344dc",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-05-15T08:53:11Z",
+      "mergedAt": "2025-05-15T08:53:11Z",
+      "mergedBy": "VMatrix1900",
+      "mergeCommit": {
+        "oid": "d04b5895bbd158cbee2b83ee36775cf24f42dcf3"
+      },
       "comments": [],
       "reviews": []
     }
