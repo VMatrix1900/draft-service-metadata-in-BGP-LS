@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-06-08T00:44:59.079663+00:00",
+  "timestamp": "2025-06-10T00:40:33.905108+00:00",
   "repo": "VMatrix1900/draft-service-metadata-in-BGP-LS",
   "labels": [
     {
@@ -121,7 +121,7 @@
       "id": "PR_kwDOJBV1fc6YhtlF",
       "title": "upstream merge template repository",
       "url": "https://github.com/VMatrix1900/draft-service-metadata-in-BGP-LS/pull/3",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "VMatrix1900",
       "authorAssociation": "OWNER",
       "assignees": [],
@@ -130,13 +130,49 @@
       ],
       "body": "Merge https://github.com/martinthomson/internet-draft-template 25d2fb2",
       "createdAt": "2025-06-02T02:06:54Z",
-      "updatedAt": "2025-06-02T02:06:54Z",
+      "updatedAt": "2025-06-09T02:09:26Z",
       "baseRepository": "VMatrix1900/draft-service-metadata-in-BGP-LS",
       "baseRefName": "main",
       "baseRefOid": "d04b5895bbd158cbee2b83ee36775cf24f42dcf3",
       "headRepository": "VMatrix1900/draft-service-metadata-in-BGP-LS",
       "headRefName": "chore/template_sync_25d2fb2",
       "headRefOid": "7e1eeb22325d7b37d5c4b9a2ac9d9b5c49e7249d",
+      "closedAt": "2025-06-09T02:09:25Z",
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "VMatrix1900",
+          "authorAssociation": "OWNER",
+          "body": "[actions-template-sync] :construction_worker: automatically closed because there is a new open PR",
+          "createdAt": "2025-06-09T02:09:24Z",
+          "updatedAt": "2025-06-09T02:09:24Z"
+        }
+      ],
+      "reviews": []
+    },
+    {
+      "number": 4,
+      "id": "PR_kwDOJBV1fc6ZnIo4",
+      "title": "upstream merge template repository",
+      "url": "https://github.com/VMatrix1900/draft-service-metadata-in-BGP-LS/pull/4",
+      "state": "OPEN",
+      "author": "VMatrix1900",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [
+        "template_sync"
+      ],
+      "body": "Merge https://github.com/martinthomson/internet-draft-template 666634c",
+      "createdAt": "2025-06-09T02:09:27Z",
+      "updatedAt": "2025-06-09T02:09:28Z",
+      "baseRepository": "VMatrix1900/draft-service-metadata-in-BGP-LS",
+      "baseRefName": "main",
+      "baseRefOid": "d04b5895bbd158cbee2b83ee36775cf24f42dcf3",
+      "headRepository": "VMatrix1900/draft-service-metadata-in-BGP-LS",
+      "headRefName": "chore/template_sync_666634c",
+      "headRefOid": "96172d29b310a45ee8c5e827d8d53a152acc3c19",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
